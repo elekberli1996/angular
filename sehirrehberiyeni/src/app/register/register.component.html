@@ -1,0 +1,38 @@
+
+<main role="main">
+
+  <div class="container">
+    <div class="row"> 
+      
+      <form [formGroup]="registerForm"  (submit)="Register()" class="form-Control">
+    
+        <div class="form-group">  
+          <input type="text" formControlName="userName" name="userName"   class="form-control" id="userName" placeholder="userName">
+        <div class="help-block"  *ngIf="f['userName'].getError('required')!=null && this.registerForm.get('userName')?.dirty" >  alan bos olamaz</div>
+        <div *ngIf=" f['userName'].getError('minlength')!=null " >6 karakterden kicik olmaz</div>
+      </div>
+          <div class="form-group">  
+             <input type="password" formControlName="password" name="password"   class="form-control" id="password" placeholder="password">
+       
+           <div *ngIf="f['password'].getError('minlength')!=null  " >4 karakterden cikik olmaz</div>
+         
+          </div>
+
+          <div class="form-group">  
+            <input type="password" formControlName="comfirmPassword" name="comfirmPassword"   class="form-control" id="comfirmPassword" placeholder="comfirmPassword">
+      
+          <div *ngIf=" f['comfirmPassword'].getError('minlength')!=null " >4 karakterden cikik olmaz</div>
+          <div *ngIf=" f['comfirmPassword'].getError('Mustmatch')!=null " >Must mach</div>
+        
+         </div>
+           
+          <button type="submit" class="btn btn-primary form-control" [disabled]="registerForm.invalid"   >  Register</button>
+       <h6>{{registerForm.value|json}}</h6>
+       <h6>{{registerForm.status|json}}</h6>
+       
+      </form>
+    </div> 
+
+  </div>
+
+</main>

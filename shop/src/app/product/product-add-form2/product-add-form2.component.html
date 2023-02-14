@@ -1,0 +1,35 @@
+<h3> Yeni Urun Reaktiv</h3>
+
+<form [formGroup]="productAddForm" (submit)="add()" class="form-group" > 
+    <div class="form-group" >
+
+        <input type="text" id=" name" name=" name" formControlName="name" placeholder="urun adi" class="form-control"  >
+        <p class="alert alert-danger" *ngIf="this.productAddForm.get('name')?.hasError('email') && this.productAddForm.get('name')?.dirty" > email gecersiz</p>
+
+        <input type="text" id="description" name="description" formControlName="description" class="form-control" placeholder="aciklama"  >
+        <div class="alert alert-danger" *ngIf="this.productAddForm.get('description')?.hasError('minLength') && this.productAddForm.get('description')?.dirty" >aciklama Zorunludur</div>
+
+
+        <input type="text" id="imageUrl" name="imageUrl" formControlName="imageUrl" class="form-control" placeholder="image adres"  >
+        <div class="alert alert-danger" *ngIf="this.productAddForm.get('imageUrl')?.hasError('required') && this.productAddForm.get('imageUrl')?.dirty" >url Zorunludur</div>
+
+        <input type="text" id=" price" name=" price" formControlName="price" class="form-control" placeholder="fiyat"  >
+        <div class="alert alert-danger" *ngIf="this.productAddForm.get('price')?.hasError('required') && this.productAddForm.get('price')?.dirty" >fiyat Zorunludur</div>
+
+
+        <select class="form-control" formControlName="catagoryId"
+    id="catagoryId" name="catagoryId"  >
+
+      <option *ngFor="let catagory of catagories"  [value]="catagory.id" >{{catagory.name}}</option>
+    </select>
+    <div class="alert alert-danger" *ngIf="this.productAddForm.get('catagoryId')?.hasError('required') && this.productAddForm.get('catagoryId')?.touched" >katagory Zorunludur</div>
+
+   
+<button class="btn btn-primary" [disabled]="productAddForm.invalid"> ekle</button>
+        
+    </div>
+
+
+
+
+</form>

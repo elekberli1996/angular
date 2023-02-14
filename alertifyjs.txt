@@ -1,0 +1,8 @@
+npm install alertifyjs  paket yuklenir
+angujlar.json da scriptin yeri gorsedilir   "./node_modules/alertifyjs/build/alertify.min.js"
+global cssde  
+@import "~alertifyjs/build/css/alertify.min.css";
+
+@import "~alertifyjs/build/css/themes/bootstrap.min.css"; elave edilir
+
+cagirilicaq komponentde declare let alertify:any kimi tanimlanir

@@ -1,0 +1,3 @@
+can activateden inplementete edilen clas guard rolunu oynaayri guard yazilandan sora
+rutda edlenir guard servis rolunu oynayir
+login guartd ervsiis yazib onu glaobal tanimyib rotda canActivate:[LoginGuard] ile cagriirq

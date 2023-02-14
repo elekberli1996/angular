@@ -1,0 +1,9 @@
+
+<div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex ">
+      <a *ngFor="let catagory of catagories" routerLink="/products/catagory/{{catagory.id}}" class="p-2 link-secondary" href="#">{{catagory.name}}</a>
+      <a  routerLink="/products" 
+      class="p-2 link-secondary" href="#">tum urunler</a>
+      
+    </nav>    
+  </div>

@@ -1,0 +1,6 @@
+angular file component class eklemek icin
+bracket pair colorizer farkli renklendirmeler
+path intellisense klasorleri yazarken gosterir
+prettier daha temiz kod
+typescrip hero rahat typescript yazma
+

@@ -1,0 +1,34 @@
+<main role="main">
+
+  <div class="container">
+    <div class="row"> 
+      
+      <form [formGroup]="cityAddForm"  (submit)="Add()" class="form-Control">
+          <h2 class="mt-3 pt-3"> Sehir Ekle</h2>
+        <div class="form-group">  
+          <input type="text" formControlName="name" name="name"   class="form-control" id="name" placeholder="name">
+       <div class="help-block"  *ngIf="this.cityAddForm.get('name')?.hasError('required') && this.cityAddForm.get('name')?.dirty" >  alan bos olamaz</div>
+           </div>
+          <div class="form-group"> 
+            
+           
+
+
+            <input type="text" formControlName="description" 
+            name="description"   class="form-control" id="description"
+             placeholder="description">
+       
+           <div *ngIf="this.cityAddForm.get('description')?.hasError('required') && this.cityAddForm.get('description')?.dirty" >alan bos olamaz</div>
+          </div>
+           
+          <button type="submit" class="btn btn-primary form-control" [disabled]="cityAddForm.invalid"   >  ekle</button>
+       <h6>{{cityAddForm.value|json}}</h6>
+       <h6>{{cityAddForm.status|json}}</h6>
+      </form>
+
+    </div> 
+
+  </div>
+
+</main>
+

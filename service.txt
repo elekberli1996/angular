@@ -1,0 +1,7 @@
+bir servisi muxtelif yerlerde kullanmak icin yaziriq meselen alertifyf servic
+ng g service servisadi komandasi ile acilir
+sora kodlar islenir
+global servis olmasi ucun provayderde eklenmelidir yada injectable root olmalisir
+global servisde calisan zaman nesne olusyor ve tekrar olmuyor
+lokal servis yaratmak ucun componentin icersinde provaydrda eklenir
+dependecy injection constructorun icerisinde global ve lokal servislerden bakib bize sunuyor

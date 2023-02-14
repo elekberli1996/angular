@@ -1,0 +1,8 @@
+ {path:'products',component:ProductComponent}
+ router module ts de bu kodu yazdigimizda o demekdir ki 
+ path adres cubugunda products gorerse product componentini cagirir
+
+ routerLink ="her hansi bir adres verib" bu qaydada cagirmaq istediyimiz komponenti cagira bilerikk
+
+ ActivatedRoute ile urlde ki parametreyi yakalamak olar 
+ catagory id yakalanib servise gondere bilerik

@@ -1,0 +1,7 @@
+oncelikle HttpClientModule elave edirik
+compnentde HttpClient cagririq
+Constructorda bir instanse yaradiriq http meselen
+ng on unit sayfa yuklendoyinde calisir onun icersinde sorgu veririk
+this.http.get<Product[]>(adres).subscribe(data=>{ this.product=data});
+this.http.post(this.path,urun clas tipinde,option)
+sorguda aray turunde gelendatayi cevrib componentimizzdeki producta berebar edirik

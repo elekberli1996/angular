@@ -1,0 +1,7 @@
+pipe ile gelen datada mueyyen deisiklikler ede bilerik  | ile yzilir
+{{product.name | uppercase}} buyuk harfe donsturur
+{{product.name | lowercase}} kicik harfe donusdurur
+{{product.name | currency}} para birimi isareti
+{{product.name | currency:'USD':true:"1.2-2"}} 
+
+ng g pipe pipename kamanda verilir custum pipe ucun

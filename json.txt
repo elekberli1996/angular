@@ -1,0 +1,2 @@
+json server npm install -g json-server yukleyirik
+calistirmak icin json-server --watch shop.json

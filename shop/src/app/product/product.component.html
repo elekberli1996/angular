@@ -1,0 +1,32 @@
+<!-- <h3 *ngIf="products; else noProduct" >{{title}}</h3>  -->
+<!-- noProduct isimdir onun inerisinde yazilanlari ng template ile 
+gosteririk hemin adlla ng templateni cagiririq -->
+<app-catagory></app-catagory>
+<div class="row">
+<ng-template #noProduct> 
+
+<div class="alert alert-danger" role="alert">
+  <h3>Bu kategoride urun yok</h3>
+</div>
+</ng-template> 
+<div  class="form-group">
+  <label for="exampleInputEmail1">aranacak ururn</label>
+  <input
+  
+  [(ngModel)]="filterText"
+  (keyup)="run($event)" 
+  (focus)="run1()"
+  class="form-control" id="exampleInputEmail1"
+   aria-describedby="emailHelp" placeholder="urun ismi">
+
+  <small *ngIf="filterText" id="emailHelp" class="form-text text-muted">{{filterText}}</small>
+</div>
+
+<div  *ngFor="let product of products | productFilter:filterText"class=" productbox" style="width: 18rem;">
+    <img src="{{product.imageUrl}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.name | uppercase}}</h5>
+      <p class="card-text">{{product.description}}</p>
+      <a (click)="consol(product)" href="#" class="btn btn-primary">{{product.price | currency:"AZN":true:"1.2-2"}}</a>
+    </div>
+  </div></div>
